@@ -19,8 +19,8 @@
 </head>
 
 <body ng-app="gameApp" ng-controller="gameCtrl">
-    <header class="text-center heading-styling">Cryptic Hunt</header>
-    <div class="text-center col-md-12 question-styling">Question : {{le+1}} Write your answer based on the pictures?</div>
+    <div ng-hide="hideGame"><div class="text-center heading-styling">Cryptic Hunt</div>
+        <div class="text-center col-md-12 question-styling">Question : {{le+1}} Write your answer based on the pictures?</div>
     <div class="col-md-12 text-center error-styling">{{lengthExceeded}}</div>
     <div class="col-md-12 text-center error-styling">{{nazdik}}</div>
     <div class="col-md-12 text-center input-box"><input class="text-styling text-center" ng-model="ans" type="text" ng-change="textCheck()"></div>
@@ -29,7 +29,9 @@
         </div>
             <div class="col-md-6"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/7da8ce5c-02ce-479f-ba64-8fad76b9a064/dbjrc8j-07e154c3-899e-45a1-b2bb-96ce48d43efa.jpg/v1/fill/w_894,h_894,q_70,strp/magic_night_by_rhads_dbjrc8j-pre.jpg"></div>
             </div>
-            <div class="col-md-12 text-center button-styling" ng-hide="!hideLiked" ng-click="nextq()"><span class="next-styling">NEXT</span></div>
+            <div class="col-md-12 text-center button-styling" ng-hide="!hideLiked" ng-click="nextq()"><span class="next-styling">{{nextbu}}</span></div>
+        </div>
+        <div class="finished-styling" ng-hide="!hideGame"><span>{{finish}}</span></div>
 </body>
 
 </html>

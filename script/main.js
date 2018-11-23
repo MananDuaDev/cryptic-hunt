@@ -2,6 +2,7 @@ var app = angular.module("gameApp", []);
 app.controller("gameCtrl", function($scope) {
     $scope.answers = [{
             "Q": ["pubg", "chicken", "PuBG", "PUbG", "PUBg", "dinner"]
+            
         },
         {
             "Q": ["pubg1", "PUBG1", "PuBG1", "PUbG1", "PUBg1"]
@@ -18,7 +19,7 @@ app.controller("gameCtrl", function($scope) {
     ]
     $scope.ans = "";
     $scope.le = 0;
-
+    $scope.nextbu="NEXT";
     $scope.textCheck = function() {
         $scope.hideLiked = false;
         // console.log($scope.ans, $scope.answers.length);
@@ -43,7 +44,9 @@ $scope.nazdik = "";
             } else if ($scope.ans.length == $scope.len && $scope.ans.charAt(j) == $scope.match.charAt(j) && $scope.ans != $scope.match) {
                 $scope.nazdik = "so close";
                 console.log('test');
-            } else {
+            } 
+            else{
+
             }
         }
     }
@@ -51,5 +54,13 @@ $scope.nazdik = "";
         $scope.ans = "";
         $scope.le++;
         $scope.hideLiked = !$scope.hideLiked;
+         if($scope.le>4) 
+            {
+                $scope.hideGame = !$scope.hideGame;
+                $scope.finish="Game over"
+            }
+            else if($scope.le>=4){
+                $scope.nextbu="FINISHED";
+            }
     }
 });
