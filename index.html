@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hunt</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://underscorejs.org/underscore-min.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+</head>
+
+<body ng-app="gameApp" ng-controller="gameCtrl">
+    <header class="text-center heading-styling">Cryptic Hunt</header>
+    <div class="text-center col-md-12 question-styling">Question : {{le+1}} Write your answer based on the pictures?</div>
+    <div class="col-md-12 text-center error-styling">{{lengthExceeded}}</div>
+    <div class="col-md-12 text-center error-styling">{{nazdik}}</div>
+    <div class="col-md-12 text-center input-box"><input class="text-styling text-center" ng-model="ans" type="text" ng-change="textCheck()"></div>
+    <div class="text-center col-md-12">
+        <div class="col-md-6"><img src="http://www.theblackpeppercorn.com/wp-content/uploads/2014/05/How-to-smoke-a-whole-chicken-5.jpg">
+        </div>
+            <div class="col-md-6"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/7da8ce5c-02ce-479f-ba64-8fad76b9a064/dbjrc8j-07e154c3-899e-45a1-b2bb-96ce48d43efa.jpg/v1/fill/w_894,h_894,q_70,strp/magic_night_by_rhads_dbjrc8j-pre.jpg"></div>
+            </div>
+            <div class="col-md-12 text-center button-styling" ng-hide="!hideLiked" ng-click="nextq()"><span class="next-styling">NEXT</span></div>
+</body>
+
+</html>

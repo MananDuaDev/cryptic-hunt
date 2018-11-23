@@ -1,0 +1,50 @@
+img {
+  width: 700px;
+  height: 700px;
+  padding-top: 40px;
+}
+.text-styling {
+  height: 30px;
+  width: inherit;
+  border-radius: 10px;
+  border-color: skyblue;
+  background-color: lightsteelblue;
+  font-size: x-large;
+  font-weight: bold;
+  color: #1d2f49;
+}
+.input-box {
+  padding-top: 40px;
+}
+.heading-styling {
+  font-size: xx-large;
+  font-weight: bolder;
+  background: black;
+  color: white;
+}
+.question-styling {
+  padding-top: 30px;
+  font-size: large;
+  font-weight: bolder;
+  background: black;
+  color: skyblue;
+}
+body {
+  background-color: black;
+}
+.next-styling {
+  color: white;
+  padding-top: 20px;
+  font-size: large;
+  font-weight: bolder;
+}
+[ng-click] {
+  cursor: pointer;
+}
+.error-styling {
+  padding-top: 20px;
+  color: tomato;
+}
+.button-styling {
+  margin-top: 20px;
+}
